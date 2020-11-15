@@ -2,6 +2,8 @@ package com.andiie.alfa.controller;
 
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,17 +30,27 @@ public class HomeController {
 		
 //		Solicitante loja01 = new Solicitante();
 //		Tecnico tec01 = new Tecnico();
+//		String[] historico = new String[] {"Mensagem 1","mensagem 2"};
+//		
+//		
+//		List<StatusChamado> histostatus = new ArrayList<StatusChamado>();
+//		histostatus.add(StatusChamado.NOVO);
+//		histostatus.add(StatusChamado.ABERTO);
+//		histostatus.add(StatusChamado.ATENDIMENTO);
+//		List<String> historicoMensagens = Arrays.asList(historico);
 //		
 //		loja01.setCargoSolicitante("gerente");
 //		loja01.setLoginUsuario("loginlj01");
 //		loja01.setLojaSolicitante("loja01login");
 //		loja01.setSenhaUsuario(123456);
 //		loja01.setNomeUsuario("Thiago");
+//		loja01.setHistoricoChamadosAbertos(chamadoRepository.findAll());
 //		
 //		tec01.setLoginUsuario("tec01login");
 //		tec01.setNivelAcesso("admin");
 //		tec01.setSenhaUsuario(999999);
 //		tec01.setNomeUsuario("Andre");
+//		tec01.setChamadosAtendidos(chamadoRepository.findAll());
 //		
 //		Chamado chamados = new Chamado();
 //		
@@ -51,6 +63,8 @@ public class HomeController {
 //		chamados.setTituloChamado("Titulo do chamado");
 //		chamados.setUrgenciaChamado(UrgenciaChamado.BAIXA);
 //		chamados.setStatusChamado(StatusChamado.ABERTO);
+//		chamados.setHistoricoMensagensChamado(historicoMensagens);
+//		chamados.setHistoricoStatusChamado(histostatus);
 //		
 //		chamadoRepository.save(chamados);
 		
