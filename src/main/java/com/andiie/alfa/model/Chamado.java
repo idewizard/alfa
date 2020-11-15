@@ -3,12 +3,16 @@ package com.andiie.alfa.model;
 import java.time.LocalDate;
 import java.util.List;
 
+import javax.persistence.CascadeType;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.validation.constraints.NotNull;
 
 
 @Entity
@@ -18,15 +22,27 @@ public class Chamado {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
+	@NotNull
 	private String tituloChamado;
+	@NotNull
 	private String descricaoChamado;
 	private LocalDate dataAberturaChamado;
-	private Solicitante solicitanteChamado;
 	private LocalDate prazoChamado;
 	private boolean primeiroAcesso;
-	private Tecnico tecnicoResponsavel;
+	
+	
 	//private anexos, n sei como fazer
+	
+	@OneToOne(cascade=CascadeType.PERSIST)
+	private Solicitante solicitanteChamado;
+	
+	@OneToOne(cascade=CascadeType.PERSIST)
+	private Tecnico tecnicoResponsavel;
+	
+	@ElementCollection
 	private List<String> historicoMensagensChamado;
+	
+	@ElementCollection
 	private List<StatusChamado> historicoStatusChamado;
 	
 	@Enumerated(EnumType.STRING)

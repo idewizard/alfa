@@ -1,5 +1,6 @@
 package com.andiie.alfa.model;
 
+
 public abstract class Usuario {
 
 	private String loginUsuario;
