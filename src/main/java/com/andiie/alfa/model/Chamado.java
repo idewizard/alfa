@@ -34,10 +34,10 @@ public class Chamado {
 	//private anexos, n sei como fazer
 	
 	@OneToOne(cascade=CascadeType.PERSIST)
-	private Solicitante solicitanteChamado;
+	private Solicitante solicitante;
 	
 	@OneToOne(cascade=CascadeType.PERSIST)
-	private Tecnico tecnicoResponsavel;
+	private Tecnico tecnico;
 	
 	@ElementCollection
 	private List<String> historicoMensagensChamado;
@@ -76,11 +76,11 @@ public class Chamado {
 	}
 
 	public Solicitante getSolicitanteChamado() {
-		return solicitanteChamado;
+		return solicitante;
 	}
 
 	public void setSolicitanteChamado(Solicitante solicitanteChamado) {
-		this.solicitanteChamado = solicitanteChamado;
+		this.solicitante = solicitanteChamado;
 	}
 
 	public LocalDate getPrazoChamado() {
@@ -100,11 +100,11 @@ public class Chamado {
 	}
 
 	public Tecnico getTecnicoResponsavel() {
-		return tecnicoResponsavel;
+		return tecnico;
 	}
 
 	public void setTecnicoResponsavel(Tecnico tecnicoResponsavel) {
-		this.tecnicoResponsavel = tecnicoResponsavel;
+		this.tecnico = tecnicoResponsavel;
 	}
 
 	public List<String> getHistoricoMensagensChamado() {

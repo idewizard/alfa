@@ -17,8 +17,11 @@ public class Tecnico extends Usuario {
 
 	private String nivelAcesso;
 	
+	
 	@ElementCollection
 	private List<Chamado> chamadosAtendidos;
+	
+	
 	
 	public String getNivelAcesso() {
 		return nivelAcesso;
